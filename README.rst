@@ -94,21 +94,21 @@ sudo yum install libjpeg-turbo-devel libpng-devel
 
 
 
-  yum install postgresql95.x86_64 
-  yum install postgresql95-contrib.x86_64
-  yum install postgresql95-devel.x86_64
-  yum install postgresql95-docs.x86_64
-  yum install postgresql95-libs.i686
-  yum install postgresql95-libs.x86_64
+   yum install postgresql95.x86_64 
+   yum install postgresql95-contrib.x86_64
+   yum install postgresql95-devel.x86_64
+   yum install postgresql95-docs.x86_64
+   yum install postgresql95-libs.i686
+   yum install postgresql95-libs.x86_64
 
-  yum install postgresql95-server.x86_64 : The programs needed to create and run a PostgreSQL server
-  yum install postgresql95-static.x86_64 : Statically linked PostgreSQL libraries
-  yum install postgresql95-test.x86_64 : The test suite distributed with PostgreSQL
+   yum install postgresql95-server.x86_64 : The programs needed to create and run a PostgreSQL server
+   yum install postgresql95-static.x86_64 : Statically linked PostgreSQL libraries
+   yum install postgresql95-test.x86_64 : The test suite distributed with PostgreSQL
 
 
-  yum install postgresql95-plperl.x86_64
-  yum install postgresql95-plpython26.x86_64
-  yum install postgresql95-plpython27.x86_64 
+   yum install postgresql95-plperl.x86_64
+   yum install postgresql95-plpython26.x86_64
+   yum install postgresql95-plpython27.x86_64 
 
 The following details how to deploy this application.
 
