@@ -27,6 +27,11 @@ if READ_DOT_ENV_FILE:
     env.read_env(env_file)
     print('The .env file has been loaded. See base.py for more information')
 
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '5s_dfc5q32(=ebrg2(_f-#-rykva-lu!f!j*p=uvd+12$69^#%'
+
+
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
 DJANGO_APPS = [
@@ -114,7 +119,7 @@ MANAGERS = ADMINS
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres://postgres:password@localhost/analyte'),
+    'default': env.db('DATABASE_URL', default='postgres://postgres:password@127.0.0.1/analyte'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 

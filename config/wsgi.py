@@ -16,6 +16,12 @@ framework.
 import os
 import sys
 
+# add the hellodjango project path into the sys.path
+sys.path.append('/var/www/html/project/social_media_scanner/')
+# add the virtualenv site-packages path to the sys.path
+sys.path.append('/var/www/html/project/django/lib/python3.5/site-packages')
+
+
 from django.core.wsgi import get_wsgi_application
 
 # This allows easy placement of apps within the interior
@@ -30,14 +36,14 @@ if os.environ.get('DJANGO_SETTINGS_MODULE') == 'config.settings.production':
 # if running multiple sites in the same mod_wsgi process. To fix this, use
 # mod_wsgi daemon mode with each site in its own daemon process, or use
 # os.environ["DJANGO_SETTINGS_MODULE"] = "config.settings.production"
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.base")
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
 # setting points here.
 application = get_wsgi_application()
-if os.environ.get('DJANGO_SETTINGS_MODULE') == 'config.settings.production':
-    application = Sentry(application)
+#if os.environ.get('DJANGO_SETTINGS_MODULE') == 'config.settings.base':
+#    application = Sentry(application)
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
