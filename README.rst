@@ -132,6 +132,23 @@ The following details how to deploy this application.
   pip install -r requirements/production.txt
   pip install -r requirements.txt
 
+Postgres
+-----------
+sudo service postgresql95 initdb
+sudo service postgresql95 start
+
+sudo su postgres
+createdb analyte
+
+
+
+
+psql
+ALTER USER postgres WITH PASSWORD 'password';
+
+
+
+
 
 https://medium.com/@bsadkhin/deploying-a-django-app-to-amazon-ec2-3f17a735a561
 
