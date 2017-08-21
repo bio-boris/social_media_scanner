@@ -1,0 +1,96 @@
+{% extends "pages/base.html" %}
+
+
+{% load i18n %}
+
+
+{% block inner %}
+</div></div>
+
+
+<h1>{% trans "Search Various APIS" %}</h1>
+
+<p>Search Twitter</p>
+<div class="row">
+  <div class="col">
+    <input type="text" placeholder="Query" id='twitter_query' value="boris"/>
+    <input type="button" value="Search For Query" onClick="search_twitter()"/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+
+    <div id="twitter_results">
+      <table class="table" id="twitter_results_table">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Link</th>
+          <th>Keyword</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col">
+    <h1> Choose APIS To Search</h1>
+
+    <form action="{% url 'submit' %}" method="GET">
+
+
+      {% csrf_token %}
+
+
+
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" id="inlineCheckboxTwitter" value="twitter" name="sites"> Twitter
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" id="inlineCheckboxReddit" value="reddit" name="sites"> Reddit
+        </label>
+      </div>
+      <div class="form-check form-check-inline disabled">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" id="inlineCheckboxFacebook" value="facebook" name="sites" disabled> Facebook
+        </label>
+      </div>
+      <div class="form-text form-text-inline">
+        <input type="text" placeholder="Competitor Mentions" id='title' value="" style='width: 300px;' required name="title"/> Title of Query
+        <br><br>
+        <input type="text" placeholder="Queries" id='keywords' value="" style="width: 300px;" required name="keywords"  /> Query string
+        <br><br>
+
+        <input type="submit" value="Search For Query" >
+      </div>
+    </form>
+
+
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col">
+    <h1> <a href="/search/jobs">My Jobs</a></h1>
+
+  </div>
+</div>
+
+{% endblock %}
