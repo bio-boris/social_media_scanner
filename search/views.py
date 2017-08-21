@@ -15,10 +15,10 @@ def jobs(request):
     ssms = SearchSocialMedia.objects.filter(user_id_id=current_user)
 
     for ssm in ssms:
-        ssm.id = "<a href='search/results/{0}/'>{0}</a>".format(ssm.id)
+        ssm.id = "search/results/{0}".format(ssm.id)
         ssm = mark_safe(ssm);
 
-    return render(request, 'pages/view_saved_searches.html', {'jobs': ssms},autoescape=False)
+    return render(request, 'pages/view_saved_searches.html', {'jobs': ssms})
     #
     # html =
     # for ssm in ssms:
