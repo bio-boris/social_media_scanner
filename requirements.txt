@@ -24,6 +24,7 @@ django-environ==0.4.3
 django-extensions==1.8.1
 django-model-utils==3.0.0
 django-redis==4.8.0
+django-tables2==1.10.0
 django-test-plus==1.0.18
 docutils==0.14
 factory-boy==2.9.2
