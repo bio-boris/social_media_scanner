@@ -86,12 +86,15 @@ You must set the DSN url in production.
 
 Deployment
 ----------
-yum groupinstall 'Development Tools'
-yum install libffi-devel.x86_64
- sudo yum install zlib-devel
-sudo yum install libjpeg-turbo-devel libpng-devel
+   
+   yum groupinstall 'Development Tools'
+   
+   yum install libffi-devel.x86_64
+   
+   sudo yum install zlib-devel
+      
+   sudo yum install libjpeg-turbo-devel libpng-devel
 
-    $ python manage.py createsuperuser
 
 
    yum install postgresql95.x86_64 
