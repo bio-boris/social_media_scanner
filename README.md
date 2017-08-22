@@ -1,5 +1,5 @@
 # Thought experiment
-### Completed
+### Completed over the weekend
 * User can log in
 * User can search twitter for a query
 * User can save their scheduled query
