@@ -62,3 +62,8 @@ ALTER USER postgres WITH PASSWORD '$password';
 ```
 # WSGI Setup and deployment to amazon ec2
  Read more at https://medium.com/@bsadkhin/deploying-a-django-app-to-amazon-ec2-3f17a735a561
+
+# Other
+ * https://www.slideshare.net/jkatz05/webscale-postgresql-jsonb
+ * https://gist.github.com/webinista/812c20247a6c21e639ce
+ * https://heap.engineering/when-to-avoid-jsonb-in-a-postgresql-schema/
