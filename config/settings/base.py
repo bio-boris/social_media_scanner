@@ -66,8 +66,8 @@ LOCAL_APPS = [
     'analyte.users.apps.UsersConfig',
     # Your stuff: custom apps go here
     'search',
-    'django_tables2'
-
+    'django_tables2',
+    'analyte',
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
