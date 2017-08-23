@@ -26,21 +26,12 @@ def jobs(request):
     current_user = request.user.id
     ssms = SearchSocialMedia.objects.filter(user_id_id=current_user)
 
-    for ssm in ssms:
-        ssm.id = "search/results/{0}".format(ssm.id)
-        ssm = mark_safe(ssm);
+    # for ssm in ssms:
+    #     ssm.id = "search/results/{0}".format(ssm.id)
+    #     ssm = mark_safe(ssm);
 
     return render(request, 'pages/view_saved_searches.html', {'jobs': ssms})
-    #
-    # html =
-    # for ssm in ssms:
-    #
-    #
-    # return render(request, 'your_template.html', {'h': h, 'var1': var1})
-    #
-    #
-    # page = TemplateView.as_view(template_name='pages/search.html')
-    # return render(request, 'polls/results.html', {'error': "Submission Submitted"})
+
 
 
 def results(request, question_id):
