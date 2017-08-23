@@ -1,0 +1,5 @@
+MAILTO=""
+ENVIRONMENT=/Users/./workspace/python/job/dj/bin/
+WORKDIR=/Users/./workspace/python/job/analyte/
+
+* * * * * $ENVIRONMENT/python $WORKDIR/manage.py runjobs hourly >>/tmp/stdout.log 2>>/tmp/stderr.log

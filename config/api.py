@@ -2,7 +2,7 @@ from django.http import HttpResponse,JsonResponse
 
 
 
-def getSearches(query):
+def getSearches(query,default_count=3):
     import twitter
 
     key = 'HxC75XpsCm7ZASuxlROfneTP8'
@@ -15,7 +15,7 @@ def getSearches(query):
                       access_token_key=token,
                       access_token_secret=token_secret)
     searches = api.GetSearch(term=query, raw_query=None, geocode=None, since_id=None,
-                             max_id=None, until=None, since=None, count=15, lang=None, locale=None,
+                             max_id=None, until=None, since=None, count=default_count, lang=None, locale=None,
                              result_type='mixed', include_entities=None)
 
     json_searches = []

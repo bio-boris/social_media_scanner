@@ -1,12 +1,24 @@
+
+
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect,JsonResponse
 
-from search.models import SearchSocialMedia
+from search.models import SearchSocialMedia,SearchSocialMediaJob,SearchSocialMediaJobResult
 from django.views.generic import TemplateView
 from django.urls import reverse
 
 import django_tables2 as tables
 from django.utils.safestring import mark_safe
+
+
+def jobs_results(request):
+    #TODO Filter by user
+    ssmjrs = SearchSocialMediaJobResult.objects.all()
+    return render(request, 'pages/view_saved_searches.html', {'jobs': ssmjrs})
+
+def jobs_admin(request):
+    ssmjs = SearchSocialMediaJob.objects.all()
+    return render(request, 'pages/view_saved_searches.html', {'jobs': ssmjs})
 
 
 

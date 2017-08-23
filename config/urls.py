@@ -26,6 +26,8 @@ urlpatterns = [
     url(r'^twitter/$', api.twitter, name='twitter'),
     url(r'^search/submit/$', search_views.submit, name='submit'),
     url(r'^search/jobs/$', search_views.jobs, name='view_jobs'),
+    url(r'^search/jobs_admin/$', search_views.jobs_admin, name='jobs_admin'),
+    url(r'^search/jobs_results/$', search_views.jobs_results, name='jobs_results'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
