@@ -31,7 +31,7 @@ if READ_DOT_ENV_FILE:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '5s_dfc5q32(=ebrg2(_f-#-rykva-lu!f!j*p=uvd+12$69^#%'
 
-ALLOWED_HOSTS=['13.58.160.200','127.0.0.1']
+ALLOWED_HOSTS=['13.58.160.200','127.0.0.1','localhost']
 
 
 # APP CONFIGURATION
