@@ -23,7 +23,8 @@ class SearchSocialMediaJob(models.Model):
         searchjobs_id = models.ForeignKey(SearchSocialMedia, on_delete=models.CASCADE)
         keywords = models.CharField(max_length=255)
         site = models.CharField(max_length=255)
-        ast_run = models.DateTimeField(auto_now=True)
+        last_run = models.DateTimeField(auto_now=True)
+        frequency = models.CharField(max_length=254)
 
 class SearchSocialMediaJobResult(models.Model):
         searchsocialmediajob_id = models.ForeignKey(SearchSocialMediaJob, on_delete=models.CASCADE)

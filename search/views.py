@@ -55,7 +55,12 @@ def submit(request):
         #TODO VALIDATE
         ssm.save()
 
-        return HttpResponse("THIS IS A GET REQUEST" + title+keywords+str_sites )
+        
+        response = \
+        "Received Submission Title:{0} Keywords:{1} Sites:{2}".format(title,keywords,sites)+\
+        '<br><br><a href="javascript:history.back()">Go Back</a>'
+
+        return HttpResponse(response)
 
 
     if request.method == 'POST':
